@@ -1,0 +1,18 @@
+{
+  "inputFile": "https://docs.google.com/spreadsheets/d/1cOeSsuaEKApx5j-pXmKbCGRbh-Gh7LZ-fmYHnI7O0Uk/export?format=csv&gid=0",
+  "interval": 2,
+  "outputFolder": "output",
+
+  "externalTables": [
+    {
+      "name": "teams",
+      "url": "https://ybnwnfwhxsdygywbacju.supabase.co/storage/v1/object/public/tournament-exports/table-teams.csv",
+      "path": "tables/table-teams.csv"
+    },
+    {
+      "name": "games",
+      "url": "https://ybnwnfwhxsdygywbacju.supabase.co/storage/v1/object/public/tournament-exports/table-games.csv",
+      "path": "tables/table-games.csv"
+    }
+  ]
+}

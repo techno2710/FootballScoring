@@ -1,0 +1,48 @@
+/* Team Container */
+.team-score-elfmeter {
+    display: flex;
+    flex-direction: column; /* Circles on top, name below */
+    align-items: center;
+    gap: 10px;
+}
+
+.team-circles-elfmeter {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+}
+
+.team-names-elfmeter{
+    display: flex;
+    gap: 50px;
+}
+
+.team-names-elfmeter.left {
+    position: absolute;
+    right: 50%;
+    margin-right: 35px;
+}
+
+.team-names-elfmeter.right {
+    position: absolute;
+    left: 50%;
+    margin-left: 35px;
+}
+
+.anim-wrapper-elfmeter::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(200px);
+    top: 0;
+    bottom: -45px;
+    width: 2px;
+    background-color: rgba(255,255,255,0.3);
+    transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.anim-wrapper-elfmeter.active::before {
+    transform: translateX(-50%) translateY(-45px);
+    opacity: 1;
+}

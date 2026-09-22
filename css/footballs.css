@@ -1,0 +1,85 @@
+/* Footballs */
+.football-htl-right,
+.football-hak-right,
+.football-htl-left,
+.football-hak-left {
+    position: relative;
+}
+
+.football-htl-right::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('../images/Elipse_BG_HTL_right.png');
+    background-size: auto 100%;
+    background-position: right center;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.football-hak-right::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('../images/Elipse_BG_HAK_right.png');
+    background-size: auto 100%;
+    background-position: right center;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.football-hak-htl-right::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('../images/Elipse_BG_HTL_HAK_right.png');
+    background-size: auto 100%;
+    background-position: right center;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.football-htl-left::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('../images/Elipse_BG_HTL_left.png');
+    background-size: auto 100%;
+    background-position: left center;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.football-hak-left::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('../images/Elipse_BG_HAK_left.png');
+    background-size: auto 100%;
+    background-position: left center;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.football-hak-htl-left::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('../images/Elipse_BG_HTL_HAK_left.png');
+    background-size: auto 100%;
+    background-position: left center;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    pointer-events: none;
+    z-index: 0;
+}

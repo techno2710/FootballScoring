@@ -1,0 +1,27 @@
+/* Additional classes for individual elements */
+.infographic-circle {
+    height: 60px;
+    min-width: 60px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+.infographic-ellipse {
+    padding: 10px 25px;
+    border-radius: 15px;
+    background-color: #EEEEEE;
+    color: #111111;
+    font-size: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.infographic-wrapper{
+    display: flex;
+    flex-direction: row;
+}

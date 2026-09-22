@@ -1,0 +1,377 @@
+/* SCOREBUG ANIMATIONS */
+.anim-wrapper-scorebug {
+    transform: translateY(-200px);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.anim-wrapper-scorebug.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.anim-item-scorebug {
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.anim-wrapper-scorebug.active .anim-item-scorebug:nth-child(1) {
+    transition-delay: 0s;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.anim-wrapper-scorebug.active .anim-item-scorebug:nth-child(2) {
+    transition-delay: 0.1s;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.anim-wrapper-scorebug.active .anim-item-scorebug:nth-child(3) {
+    transition-delay: 0.2s;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.anim-wrapper-scorebug.active .anim-item-scorebug:nth-child(4) {
+    transition-delay: 0.3s;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.anim-wrapper-scorebug.active .anim-item-scorebug:nth-child(5) {
+    transition-delay: 0.4s;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* ELFMETER ANIMATIONS */
+.anim-wrapper-elfmeter {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 100px; /* space between teams */
+    z-index: 10;
+}
+
+
+.anim-wrapper-elfmeter.active {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+/* Circle elements for each team should have classes like num1, num2... */
+/* Animate circles in as they become active */
+.anim-wrapper-elfmeter.active .circle-elfmeter.num1,
+.anim-wrapper-elfmeter.active .circle-elfmeter.num2,
+.anim-wrapper-elfmeter.active .circle-elfmeter.num3,
+.anim-wrapper-elfmeter.active .circle-elfmeter.num4,
+.anim-wrapper-elfmeter.active .circle-elfmeter.num5,
+.anim-wrapper-elfmeter.active .circle-elfmeter.num6
+{
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Staggered animation for Elfmeter circles by number */
+.anim-wrapper-elfmeter.active .circle-elfmeter.num1 {
+    transition-delay: 0s;
+    opacity: 1;
+}
+.anim-wrapper-elfmeter.active .circle-elfmeter.num2 {
+    transition-delay: 0.1s;
+    opacity: 1;
+}
+.anim-wrapper-elfmeter.active .circle-elfmeter.num3 {
+    transition-delay: 0.2s;
+    opacity: 1;
+}
+.anim-wrapper-elfmeter.active .circle-elfmeter.num4 {
+    transition-delay: 0.3s;
+    opacity: 1;
+}
+.anim-wrapper-elfmeter.active .circle-elfmeter.num5 {
+    transition-delay: 0.4s;
+    opacity: 1;
+}
+.anim-wrapper-elfmeter.active .circle-elfmeter.num6 {
+    transition-delay: 0.5s;
+    opacity: 1;
+}
+
+.circle-elfmeter {
+    transform: translateY(150px);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* INFOGRAPHIC ANIMATIONS */
+.anim-wrapper-infographic {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%) translateY(180px);
+    transition: 0.6s ease;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    z-index: 10;
+}
+
+.anim-wrapper-infographic.active {
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Animate items in the infographic */
+.anim-item-infographic {
+    transform: translateY(-50px);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+}
+
+.anim-wrapper-infographic.active .anim-item-infographic:nth-child(1) {
+    transition-delay: 0s;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.anim-wrapper-infographic.active .anim-item-infographic:nth-child(2) {
+    transition-delay: 0.5s;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/*Anim-Endstand*/
+.anim-item-endstand {
+    transform: translateY(60px);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.anim-wrapper-endstand.active .anim-item-endstand:nth-child(1) {
+    transition-delay: 0s;
+    transform: translateY(-50px);
+    opacity: 1;
+}
+.anim-wrapper-endstand.active .anim-item-endstand:nth-child(2) {
+    transition-delay: 0.1s;
+    transform: translateY(-60px);
+    opacity: 1;
+}
+.anim-wrapper-endstand.active .anim-item-endstand:nth-child(3) {
+    transition-delay: 0.2s;
+    transform: translateY(-60px);
+    opacity: 1;
+}
+.anim-wrapper-endstand.active .anim-item-endstand:nth-child(4) {
+    transition-delay: 0.3s;
+    transform: translateY(-60px);
+    opacity: 1;
+}
+.anim-wrapper-endstand.active .anim-item-endstand:nth-child(5) {
+    transition-delay: 0.4s;
+    transform: translateY(-60px);
+    opacity: 1;
+}
+
+/*TABLE Animations*/
+.anim-wrapper-turnierbaum,
+.anim-wrapper-groups,
+.anim-wrapper-groups-points,
+.anim-wrapper-tor,
+.anim-wrapper-credits,
+.anim-wrapper-top3,
+.anim-wrapper-coming{
+    transform: translateY(60px);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.anim-wrapper-turnierbaum.active-turnierbaum,
+.anim-wrapper-groups.active-groups,
+.anim-wrapper-groups-points.active-groups-points,
+.anim-wrapper-tor.active-tor,
+.anim-wrapper-credits.active-credits,
+.anim-wrapper-top3.active-top3,
+.anim-wrapper-coming.active-coming{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.anim-wrapper-turnierbaum .anim-item-turnierbaum,
+.anim-wrapper-groups .anim-item-groups,
+.anim-wrapper-groups-points .anim-item-groups-points,
+.anim-wrapper-tor .anim-item-tor,
+.anim-wrapper-credits .anim-item-credits,
+.anim-wrapper-top3 .anim-item-top3,
+.anim-wrapper-coming .anim-item-coming{
+    transform: translateY(40px);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.anim-wrapper-turnierbaum.active-turnierbaum .group0,
+.anim-wrapper-groups.active-groups .group0,
+.anim-wrapper-groups-points.active-groups-points .group0,
+.anim-wrapper-tor.active-tor .group0,
+.anim-wrapper-credits.active-credits .group0,
+.anim-wrapper-top3.active-top3 .group0,
+.anim-wrapper-coming.active-coming .group0{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.anim-wrapper-turnierbaum.active-turnierbaum .group1,
+.anim-wrapper-groups.active-groups .group1,
+.anim-wrapper-groups-points.active-groups-points .group1,
+.anim-wrapper-tor.active-tor .group1,
+.anim-wrapper-credits.active-credits .group1,
+.anim-wrapper-top3.active-top3 .group1,
+.anim-wrapper-coming.active-coming .group1{
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 0.1s;
+}
+
+.anim-wrapper-turnierbaum.active-turnierbaum .group2,
+.anim-wrapper-groups.active-groups .group2,
+.anim-wrapper-groups-points.active-groups-points .group2,
+.anim-wrapper-tor.active-tor .group2,
+.anim-wrapper-credits.active-credits .group2,
+.anim-wrapper-top3.active-top3 .group2,
+.anim-wrapper-coming.active-coming .group2{
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 0.2s;
+}
+
+.anim-wrapper-turnierbaum.active-turnierbaum .group3,
+.anim-wrapper-groups.active-groups .group3,
+.anim-wrapper-groups-points.active-groups-points .group3,
+.anim-wrapper-tor.active-tor .group3,
+.anim-wrapper-credits.active-credits .group3,
+.anim-wrapper-top3.active-top3 .group3,
+.anim-wrapper-coming.active-coming .group3{
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 0.3s;
+}
+
+.anim-wrapper-turnierbaum.active-turnierbaum .group4,
+.anim-wrapper-groups.active-groups .group4,
+.anim-wrapper-groups-points.active-groups-points .group4,
+.anim-wrapper-tor.active-tor .group4,
+.anim-wrapper-credits.active-credits .group4,
+.anim-wrapper-top3.active-top3 .group4{
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 0.4s;
+}
+
+.anim-wrapper-turnierbaum.active-turnierbaum .group5,
+.anim-wrapper-groups.active-groups .group5,
+.anim-wrapper-groups-points.active-groups-points .group5,
+.anim-wrapper-tor.active-tor .group5,
+.anim-wrapper-credits.active-credits .group5,
+.anim-wrapper-top3.active-top3 .group5{
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+
+.anim-wrapper-turnierbaum.active-turnierbaum .group6,
+.anim-wrapper-groups.active-groups .group6,
+.anim-wrapper-groups-points.active-groups-points .group6,
+.anim-wrapper-tor.active-tor .group6,
+.anim-wrapper-credits.active-credits .group6,
+.anim-wrapper-top3.active-top3 .group6{
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 0.6s;
+}
+
+.anim-wrapper-turnierbaum.active-turnierbaum .group7,
+.anim-wrapper-groups.active-groups .group7,
+.anim-wrapper-groups-points.active-groups-points .group7,
+.anim-wrapper-tor.active-tor .group7,
+.anim-wrapper-credits.active-credits .group7{
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 0.7s;
+}
+
+.anim-wrapper-turnierbaum.active-turnierbaum .group8,
+.anim-wrapper-groups.active-groups .group8,
+.anim-wrapper-groups-points.active-groups-points .group8,
+.anim-wrapper-tor.active-tor .group8,
+.anim-wrapper-credits.active-credits .group8{
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 0.8s;
+}
+
+.anim-wrapper-tor.active-tor .group9,
+.anim-wrapper-credits.active-credits .group9{
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 0.9s;
+}
+
+.anim-wrapper-tor.active-tor .group10,
+.anim-wrapper-credits.active-credits .group10{
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 1.0s;
+}
+
+.anim-wrapper-tor.active-tor .group11,
+.anim-wrapper-credits.active-credits .group11{
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 1.1s;
+}
+
+.anim-wrapper-tor.active-tor .group12,
+.anim-wrapper-credits.active-credits .group12{
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 1.2s;
+}
+
+.anim-wrapper-tor.active-tor .group13,
+.anim-wrapper-credits.active-credits .group13{
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 1.3s;
+}
+
+.anim-wrapper-tor.active-tor .group14,
+.anim-wrapper-credits.active-credits .group14{
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 1.4s;
+}
+
+.anim-wrapper-tor.active-tor .group15{
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 1.5s;
+}
+
+.anim-wrapper-tor.active-tor .group16{
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 1.6s;
+}
+
+.fade{
+    opacity: 0 !important;
+    transition: 0.4s ease !important;
+}

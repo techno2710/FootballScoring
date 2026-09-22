@@ -1,0 +1,884 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Weihnachtsturnier Scoreboard</title>
+    <link rel="stylesheet" href="css/footballs.css">
+    <link rel="stylesheet" href="css/top3.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/elfmeter.css">
+    <link rel="stylesheet" href="css/endstand.css">
+    <link rel="stylesheet" href="css/infographic.css">
+    <link rel="stylesheet" href="css/tgroups.css">
+    <link rel="stylesheet" href="css/tturnierbaum.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/view.css">
+</head>
+<body>
+<div class="viewer_view">
+    <!-- Scorebug oben links D=TRUE-->
+    <div class="anim-wrapper-scorebug" id="animScorebug">
+        <div class="scorebug-wrapper">
+                <div class="team-score-scorebug">
+                    <div class="circle gradient-borange anim-item-scorebug" id="scoreA">0</div>
+                    <div class="ellipse football-hak-htl-right text-align-left anim-item-scorebug" id="teamA">Team A</div>
+                    <div class="ellipse timer anim-item-scorebug" id="time">00:00</div>
+                    <div class="ellipse football-hak-htl-left text-align-right anim-item-scorebug" id="teamB">Team B</div>
+                    <div class="circle gradient-borange anim-item-scorebug" id="scoreB">0</div>
+                </div>
+        </div>
+    </div>
+
+    <!--Gruppentabelle ohne Punkte D=TRUE-->
+    <div class="grid-container anim-wrapper-groups">
+        <table class="fullscreen-grid">
+
+            <tr>
+                <td class="narrow-col"><div class="circle stack-A"></div></td>
+                <td colspan="2" class="anim-item-groups group1 stack-A">
+                    <div class="ellipse football-hak-htl-right bold small-head-font">Gruppe A</div>
+                </td><td></td>
+                <td class="narrow-col"><div class="circle stack-B"></div></td>
+                <td colspan="2" class="anim-item-groups group1 stack-B">
+                    <div class="ellipse football-hak-htl-right bold small-head-font">Gruppe B</div>
+                </td><td></td>
+                <td class="narrow-col"><div class="circle stack-C"></div></td>
+                <td colspan="2" class="anim-item-groups group1 stack-C">
+                    <div class="ellipse football-hak-htl-right bold small-head-font">Gruppe C</div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="narrow-col anim-item-groups group2"><div class="circle gradient-borange stack-A"></div></td>
+                <td colspan="2" class="anim-item-groups group2 stack-A"><div class="ellipse football-hak-htl-right">A1</div></td><td></td>
+                <td class="narrow-col anim-item-groups group2"><div class="circle gradient-borange stack-B"></div></td>
+                <td colspan="2" class="anim-item-groups group2 stack-B"><div class="ellipse football-hak-htl-right">B1</div></td><td></td>
+                <td class="narrow-col anim-item-groups group2"><div class="circle gradient-borange stack-C"></div></td>
+                <td colspan="2" class="anim-item-groups group2 stack-C"><div class="ellipse football-hak-htl-right">C1</div></td>
+            </tr>
+
+            <tr>
+                <td class="narrow-col anim-item-groups group3"><div class="circle gradient-borange stack-A"></div></td>
+                <td colspan="2" class="anim-item-groups group3 stack-A"><div class="ellipse football-hak-htl-right">A2</div></td><td></td>
+                <td class="narrow-col anim-item-groups group3"><div class="circle gradient-borange stack-B"></div></td>
+                <td colspan="2" class="anim-item-groups group3 stack-B"><div class="ellipse football-hak-htl-right">B2</div></td><td></td>
+                <td class="narrow-col anim-item-groups group3"><div class="circle gradient-borange stack-C"></div></td>
+                <td colspan="2" class="anim-item-groups group3 stack-C"><div class="ellipse football-hak-htl-right">C2</div></td>
+            </tr>
+
+            <tr>
+                <td class="narrow-col anim-item-groups group4"><div class="circle gradient-borange stack-A"></div></td>
+                <td colspan="2" class="anim-item-groups group4 stack-A"><div class="ellipse football-hak-htl-right">A3</div></td><td></td>
+                <td class="narrow-col anim-item-groups group4"><div class="circle gradient-borange stack-B"></div></td>
+                <td colspan="2" class="anim-item-groups group4 stack-B"><div class="ellipse football-hak-htl-right">B3</div></td><td></td>
+                <td class="narrow-col anim-item-groups group4"><div class="circle gradient-borange stack-C"></div></td>
+                <td colspan="2" class="anim-item-groups group4 stack-C"><div class="ellipse football-hak-htl-right">C3</div></td>
+            </tr>
+
+            <tr>
+                <td class="narrow-col anim-item-groups group5"><div class="circle gradient-borange stack-A"></div></td>
+                <td colspan="2" class="anim-item-groups group5 stack-A"><div class="ellipse football-hak-htl-right">A4</div></td><td></td>
+                <td class="narrow-col anim-item-groups group5"><div class="circle gradient-borange stack-B"></div></td>
+                <td colspan="2" class="anim-item-groups group5 stack-B"><div class="ellipse football-hak-htl-right">B4</div></td><td></td>
+                <td class="narrow-col anim-item-groups group5"><div class="circle gradient-borange stack-C"></div></td>
+                <td colspan="2" class="anim-item-groups group5 stack-C"><div class="ellipse football-hak-htl-right">C4</div></td>
+            </tr>
+
+            <tr>
+                <td class="narrow-col anim-item-groups group6"><div class="circle gradient-borange stack-A"></div></td>
+                <td colspan="2" class="anim-item-groups group6 stack-A"><div class="ellipse football-hak-htl-right">A5</div></td><td></td>
+                <td class="narrow-col anim-item-groups group6"><div class="circle gradient-borange stack-B"></div></td>
+                <td colspan="2" class="anim-item-groups group6 stack-B"><div class="ellipse football-hak-htl-right">B5</div></td><td></td>
+                <td class="narrow-col anim-item-groups group6"><div class="circle gradient-borange stack-C"></div></td>
+                <td colspan="2" class="anim-item-groups group6 stack-C"><div class="ellipse football-hak-htl-right">C5</div></td>
+            </tr>
+
+            <tr>
+                <td class="narrow-col anim-item-groups group7"><div class="circle gradient-borange stack-A"></div></td>
+                <td colspan="2" class="anim-item-groups group7 stack-A"><div class="ellipse football-hak-htl-right">A6</div></td><td></td>
+                <td class="narrow-col anim-item-groups group7"><div class="circle gradient-borange stack-B"></div></td>
+                <td colspan="2" class="anim-item-groups group7 stack-B"><div class="ellipse football-hak-htl-right">B6</div></td><td></td>
+                <td class="narrow-col anim-item-groups group7"><div class="circle gradient-borange stack-C"></div></td>
+                <td colspan="2" class="anim-item-groups group7 stack-C"><div class="ellipse football-hak-htl-right">C6</div></td>
+            </tr>
+
+            <tr>
+                <td class="narrow-col"></td><td></td><td></td><td></td>
+                <td class="narrow-col"></td>
+                <td colspan="2" rowspan="2" class="anim-item-groups group0">
+                    <div class="ellipse fill-out head-font bold">Gruppenübersicht</div>
+                </td>
+                <td></td><td class="narrow-col"></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td class="narrow-col"></td><td></td><td></td><td></td>
+                <td class="narrow-col"></td><td></td>
+                <td class="narrow-col"></td><td></td><td></td>
+            </tr>
+
+            <tr>
+                <td class="narrow-col"><div class="circle stack-D"></div></td>
+                <td colspan="2" class="anim-item-groups group1 stack-D"><div class="ellipse football-hak-htl-right bold small-head-font">Gruppe D</div></td><td></td>
+                <td class="narrow-col"><div class="circle stack-E"></div></td>
+                <td colspan="2" class="anim-item-groups group1 stack-E"><div class="ellipse football-hak-htl-right bold small-head-font">Gruppe E</div></td><td></td>
+                <td class="narrow-col"><div class="circle stack-F"></div></td>
+                <td colspan="2" class="anim-item-groups group1 stack-F"><div class="ellipse football-hak-htl-right bold small-head-font">Gruppe F</div></td>
+            </tr>
+
+            <tr>
+                <td class="narrow-col anim-item-groups group2"><div class="circle gradient-borange stack-D"></div></td>
+                <td colspan="2" class="anim-item-groups group2 stack-D"><div class="ellipse football-hak-htl-right">D1</div></td><td></td>
+                <td class="narrow-col anim-item-groups group2"><div class="circle gradient-borange stack-E"></div></td>
+                <td colspan="2" class="anim-item-groups group2 stack-E"><div class="ellipse football-hak-htl-right">E1</div></td><td></td>
+                <td class="narrow-col anim-item-groups group2"><div class="circle gradient-borange stack-F"></div></td>
+                <td colspan="2" class="anim-item-groups group2 stack-F"><div class="ellipse football-hak-htl-right">F1</div></td>
+            </tr>
+
+            <tr>
+                <td class="narrow-col anim-item-groups group3"><div class="circle gradient-borange stack-D"></div></td>
+                <td colspan="2" class="anim-item-groups group3 stack-D"><div class="ellipse football-hak-htl-right">D2</div></td><td></td>
+                <td class="narrow-col anim-item-groups group3"><div class="circle gradient-borange stack-E"></div></td>
+                <td colspan="2" class="anim-item-groups group3 stack-E"><div class="ellipse football-hak-htl-right">E2</div></td><td></td>
+                <td class="narrow-col anim-item-groups group3"><div class="circle gradient-borange stack-F"></div></td>
+                <td colspan="2" class="anim-item-groups group3 stack-F"><div class="ellipse football-hak-htl-right">F2</div></td>
+            </tr>
+
+            <tr>
+                <td class="narrow-col anim-item-groups group4"><div class="circle gradient-borange stack-D"></div></td>
+                <td colspan="2" class="anim-item-groups group4 stack-D"><div class="ellipse football-hak-htl-right">D3</div></td><td></td>
+                <td class="narrow-col anim-item-groups group4"><div class="circle gradient-borange stack-E"></div></td>
+                <td colspan="2" class="anim-item-groups group4 stack-E"><div class="ellipse football-hak-htl-right">E3</div></td><td></td>
+                <td class="narrow-col anim-item-groups group4"><div class="circle gradient-borange stack-F"></div></td>
+                <td colspan="2" class="anim-item-groups group4 stack-F"><div class="ellipse football-hak-htl-right">F3</div></td>
+            </tr>
+
+            <tr>
+                <td class="narrow-col anim-item-groups group5"><div class="circle gradient-borange stack-D"></div></td>
+                <td colspan="2" class="anim-item-groups group5 stack-D"><div class="ellipse football-hak-htl-right">D4</div></td><td></td>
+                <td class="narrow-col anim-item-groups group5"><div class="circle gradient-borange stack-E"></div></td>
+                <td colspan="2" class="anim-item-groups group5 stack-E"><div class="ellipse football-hak-htl-right">E4</div></td><td></td>
+                <td class="narrow-col anim-item-groups group5"><div class="circle gradient-borange stack-F"></div></td>
+                <td colspan="2" class="anim-item-groups group5 stack-F"><div class="ellipse football-hak-htl-right">F4</div></td>
+            </tr>
+
+            <tr>
+                <td class="narrow-col anim-item-groups group6"><div class="circle gradient-borange stack-D"></div></td>
+                <td colspan="2" class="anim-item-groups group6 stack-D"><div class="ellipse football-hak-htl-right">D5</div></td><td></td>
+                <td class="narrow-col anim-item-groups group6"><div class="circle gradient-borange stack-E"></div></td>
+                <td colspan="2" class="anim-item-groups group6 stack-E"><div class="ellipse football-hak-htl-right">E5</div></td><td></td>
+                <td class="narrow-col anim-item-groups group6"><div class="circle gradient-borange stack-F"></div></td>
+                <td colspan="2" class="anim-item-groups group6 stack-F"><div class="ellipse football-hak-htl-right">F5</div></td>
+            </tr>
+
+            <tr>
+                <td class="narrow-col anim-item-groups group7"><div class="circle gradient-borange stack-D"></div></td>
+                <td colspan="2" class="anim-item-groups group7 stack-D"><div class="ellipse football-hak-htl-right">D6</div></td><td></td>
+                <td class="narrow-col anim-item-groups group7"><div class="circle gradient-borange stack-E"></div></td>
+                <td colspan="2" class="anim-item-groups group7 stack-E"><div class="ellipse football-hak-htl-right">E6</div></td><td></td>
+                <td class="narrow-col anim-item-groups group7"><div class="circle gradient-borange stack-F"></div></td>
+                <td colspan="2" class="anim-item-groups group7 stack-F"><div class="ellipse football-hak-htl-right">F6</div></td>
+            </tr>
+
+        </table>
+    </div>
+
+    <!--Gruppentabelle mit Punkte D=TRUE-->
+    <div class="grid-container anim-wrapper-groups-points">
+        <table class="fullscreen-grid">
+            <tr><td class="narrow-col"><div class="circle invisible stack-A"></div></td>
+                <td class="anim-item-groups-points group1 name-width stack-A"><div class="ellipse football-hak-htl-right bold small-head-font">Gruppe A</div></td>
+                <td class="anim-item-groups-points group1 points-width stack-A"><div class="ellipse bold small-head-font">Punkte</div></td><td></td>
+                <td class="narrow-col"><div class="circle invisible stack-B"></div></td>
+                <td class="anim-item-groups-points group1 name-width stack-B"><div class="ellipse football-hak-htl-right bold small-head-font">Gruppe B</div></td>
+                <td class="anim-item-groups-points group1 points-width stack-B"><div class="ellipse bold small-head-font">Punkte</div></td><td></td>
+                <td class="narrow-col"><div class="circle invisible stack-C"></div></td>
+                <td class="anim-item-groups-points group1 name-width stack-C"><div class="ellipse football-hak-htl-right bold small-head-font">Gruppe C</div></td>
+                <td class="anim-item-groups-points group1 points-width  stack-C"><div class="ellipse bold small-head-font">Punkte</div></td>
+            </tr>
+            <tr><td class="narrow-col anim-item-groups-points group2"><div class="circle gradient-borange stack-A"></div></td>
+                <td class="anim-item-groups-points group2 name-width stack-A"><div class="ellipse football-hak-htl-right">A1</div></td>
+                <td class="anim-item-groups-points group2 points-width stack-A"><div class="ellipse">0</div></td><td></td>
+                <td class="narrow-col anim-item-groups-points group2"><div class="circle gradient-borange stack-B"></div></td>
+                <td class="anim-item-groups-points group2 name-width stack-B"><div class="ellipse football-hak-htl-right">B1</div></td>
+                <td class="anim-item-groups-points group2 points-width stack-B"><div class="ellipse">0</div><td></td>
+                <td class="narrow-col anim-item-groups-points group2"><div class="circle gradient-borange stack-C"></div></td>
+                <td class="anim-item-groups-points group2 name-width stack-C"><div class="ellipse football-hak-htl-right">C1</div></td>
+                <td class="anim-item-groups-points group2 points-width stack-C"><div class="ellipse">0</div>
+            </tr>
+            <tr><td class="narrow-col anim-item-groups-points group3"><div class="circle gradient-borange stack-A"></div></td>
+                <td class="anim-item-groups-points group3 name-width stack-A"><div class="ellipse football-hak-htl-right">B1</div></td>
+                <td class="anim-item-groups-points group3 points-width stack-A"><div class="ellipse">0</div><td></td>
+                <td class="narrow-col anim-item-groups-points group3"><div class="circle gradient-borange stack-B"></div></td>
+                <td class="anim-item-groups-points group3 name-width stack-B"><div class="ellipse football-hak-htl-right">B2</div></td>
+                <td class="anim-item-groups-points group3 points-width stack-B"><div class="ellipse">0</div><td></td>
+                <td class="narrow-col anim-item-groups-points group3"><div class="circle gradient-borange stack-C"></div></td>
+                <td class="anim-item-groups-points group3 name-width stack-C"><div class="ellipse football-hak-htl-right">B3</div></td>
+                <td class="anim-item-groups-points group3 points-width stack-C"><div class="ellipse">0</div>
+            </tr>
+            <tr><td class="narrow-col anim-item-groups-points group4"><div class="circle gradient-borange stack-A"></div></td>
+                <td class="anim-item-groups-points group4 name-width stack-A"><div class="ellipse football-hak-htl-right">A3</div></td>
+                <td class="anim-item-groups-points group4 points-width stack-A"><div class="ellipse">0</div><td></td>
+                <td class="narrow-col anim-item-groups-points group4"><div class="circle gradient-borange stack-B"></div></td>
+                <td class="anim-item-groups-points group4 name-width stack-B"><div class="ellipse football-hak-htl-right">B3</div></td>
+                <td class="anim-item-groups-points group4 points-width stack-B"><div class="ellipse">0</div><td></td>
+                <td class="narrow-col anim-item-groups-points group4"><div class="circle gradient-borange stack-C"></div></td>
+                <td class="anim-item-groups-points group4 name-width stack-C"><div class="ellipse football-hak-htl-right">C3</div></td>
+                <td class="anim-item-groups-points group4 points-width stack-C"><div class="ellipse">0</div>
+            </tr>
+            <tr><td class="narrow-col anim-item-groups-points group5"><div class="circle gradient-borange stack-A"></div></td>
+                <td class="anim-item-groups-points group5 name-width stack-A"><div class="ellipse football-hak-htl-right">A4</div></td>
+                <td class="anim-item-groups-points group5 points-width stack-A"><div class="ellipse">0</div><td></td>
+                <td class="narrow-col anim-item-groups-points group5"><div class="circle gradient-borange stack-B"></div></td>
+                <td class="anim-item-groups-points group5 name-width stack-B"><div class="ellipse football-hak-htl-right">B4</div></td>
+                <td class="anim-item-groups-points group5 points-width stack-B"><div class="ellipse">0</div><td></td>
+                <td class="narrow-col anim-item-groups-points group5"><div class="circle gradient-borange stack-C"></div></td>
+                <td class="anim-item-groups-points group5 name-width stack-C"><div class="ellipse football-hak-htl-right">C4</div></td>
+                <td class="anim-item-groups-points group5 points-width stack-C"><div class="ellipse">0</div>
+            </tr>
+            <tr><td class="narrow-col anim-item-groups-points group6"><div class="circle gradient-borange stack-A"></div></td>
+                <td class="anim-item-groups-points group6 name-width stack-A"><div class="ellipse football-hak-htl-right">A5</div></td>
+                <td class="anim-item-groups-points group6 points-width stack-A"><div class="ellipse">0</div><td></td>
+                <td class="narrow-col anim-item-groups-points group6"><div class="circle gradient-borange stack-B"></div></td>
+                <td class="anim-item-groups-points group6 name-width stack-B"><div class="ellipse football-hak-htl-right">B5</div></td>
+                <td class="anim-item-groups-points group6 points-width stack-B"><div class="ellipse">0</div><td></td>
+                <td class="narrow-col anim-item-groups-points group6"><div class="circle gradient-borange stack-C"></div></td>
+                <td class="anim-item-groups-points group6 name-width stack-C"><div class="ellipse football-hak-htl-right">C5</div></td>
+                <td class="anim-item-groups-points group6 points-width stack-C"><div class="ellipse">0</div>
+            </tr>
+            <tr><td class="narrow-col anim-item-groups-points group7"><div class="circle gradient-borange stack-A"></div></td>
+                <td class="anim-item-groups-points group7 name-width stack-A"><div class="ellipse football-hak-htl-right">A6</div></td>
+                <td class="anim-item-groups-points group7 points-width stack-A"><div class="ellipse">0</div><td></td>
+                <td class="narrow-col anim-item-groups-points group7"><div class="circle gradient-borange stack-B"></div></td>
+                <td class="anim-item-groups-points group7 name-width stack-B"><div class="ellipse football-hak-htl-right">B6</div></td>
+                <td class="anim-item-groups-points group7 points-width stack-B"><div class="ellipse">0</div><td></td>
+                <td class="narrow-col anim-item-groups-points group7"><div class="circle gradient-borange stack-C"></div></td>
+                <td class="anim-item-groups-points group7 name-width stack-C"><div class="ellipse football-hak-htl-right">C6</div></td>
+                <td class="anim-item-groups-points group7 points-width stack-C"><div class="ellipse">0</div>
+            </tr>
+            <tr>
+                <td class="narrow-col"></td><td></td><td></td><td></td><td class="narrow-col"></td>
+                <td colspan="2" rowspan="2" class="anim-item-groups-points group0"><div class="ellipse fill-out head-font bold">Punktetabelle</div></td><td></td>
+                <td class="narrow-col"></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td class="narrow-col"></td><td></td><td></td><td></td><td class="narrow-col"></td><td></td><td class="narrow-col"></td><td></td><td></td>
+            </tr>
+            <tr><td class="narrow-col"><div class="circle invisible stack-D"></div></td>
+                <td class="anim-item-groups-points group1 name-width stack-D"><div class="ellipse football-hak-htl-right bold small-head-font">Gruppe D</div></td>
+                <td class="anim-item-groups-points group1 points-width stack-D"><div class="ellipse bold small-head-font">Punkte</div><td></td>
+                <td class="narrow-col"><div class="circle invisible stack-E"></div></td>
+                <td class="anim-item-groups-points group1 name-width stack-E"><div class="ellipse football-hak-htl-right bold small-head-font">Gruppe E</div></td>
+                <td class="anim-item-groups-points group1 points-width stack-E"><div class="ellipse bold small-head-font">Punkte</div><td></td>
+                <td class="narrow-col"><div class="circle invisible stack-F"></div></td>
+                <td class="anim-item-groups-points group1 name-width stack-F"><div class="ellipse football-hak-htl-right bold small-head-font">Gruppe F</div></td>
+                <td class="anim-item-groups-points group1 points-width stack-F"><div class="ellipse bold small-head-font">Punkte</div>
+            </tr>
+            <tr><td class="narrow-col anim-item-groups-points group2"><div class="circle gradient-borange stack-D"></div></td>
+                <td class="anim-item-groups-points group2 name-width stack-D"><div class="ellipse football-hak-htl-right">D1</div></td>
+                <td class="anim-item-groups-points group2 points-width stack-D"><div class="ellipse">0</div><td></td>
+                <td class="narrow-col anim-item-groups-points group2"><div class="circle gradient-borange stack-E"></div></td>
+                <td class="anim-item-groups-points group2 name-width stack-E"><div class="ellipse football-hak-htl-right">E1</div></td>
+                <td class="anim-item-groups-points group2 points-width stack-E"><div class="ellipse">0</div><td></td>
+                <td class="narrow-col anim-item-groups-points group2"><div class="circle gradient-borange stack-F"></div></td>
+                <td class="anim-item-groups-points group2 name-width stack-F"><div class="ellipse football-hak-htl-right">F1</div></td>
+                <td class="anim-item-groups-points group2 points-width stack-F"><div class="ellipse">0</div>
+            </tr>
+            <tr><td class="narrow-col anim-item-groups-points group3"><div class="circle gradient-borange stack-D"></div></td>
+                <td class="anim-item-groups-points group3 name-width stack-D"><div class="ellipse football-hak-htl-right">D2</div></td>
+                <td class="anim-item-groups-points group3 points-width stack-D"><div class="ellipse">0</div><td></td>
+                <td class="narrow-col anim-item-groups-points group3"><div class="circle gradient-borange stack-E"></div></td>
+                <td class="anim-item-groups-points group3 name-width stack-E"><div class="ellipse football-hak-htl-right">E2</div></td>
+                <td class="anim-item-groups-points group3 points-width stack-E"><div class="ellipse">0</div><td></td>
+                <td class="narrow-col anim-item-groups-points group3"><div class="circle gradient-borange stack-F"></div></td>
+                <td class="anim-item-groups-points group3 name-width stack-F"><div class="ellipse football-hak-htl-right">F2</div></td>
+                <td class="anim-item-groups-points group3 points-width stack-F"><div class="ellipse">0</div>
+            </tr>
+            <tr><td class="narrow-col anim-item-groups-points group4"><div class="circle gradient-borange stack-D"></div></td>
+                <td class="anim-item-groups-points group4 name-width stack-D"><div class="ellipse football-hak-htl-right">D3</div></td>
+                <td class="anim-item-groups-points group4 points-width stack-D"><div class="ellipse">0</div><td></td>
+                <td class="narrow-col anim-item-groups-points group4"><div class="circle gradient-borange stack-E"></div></td>
+                <td class="anim-item-groups-points group4 name-width stack-E"><div class="ellipse football-hak-htl-right">E3</div></td>
+                <td class="anim-item-groups-points group4 points-width stack-E"><div class="ellipse">0</div><td></td>
+                <td class="narrow-col anim-item-groups-points group4"><div class="circle gradient-borange stack-F"></div></td>
+                <td class="anim-item-groups-points group4 name-width stack-F"><div class="ellipse football-hak-htl-right">F3</div></td>
+                <td class="anim-item-groups-points group4 points-width stack-F"><div class="ellipse">0</div>
+            </tr>
+            <tr><td class="narrow-col anim-item-groups-points group5"><div class="circle gradient-borange stack-D"></div></td>
+                <td class="anim-item-groups-points group5 name-width stack-D"><div class="ellipse football-hak-htl-right">D4</div></td>
+                <td class="anim-item-groups-points group5 points-width stack-D"><div class="ellipse">0</div><td></td>
+                <td class="narrow-col anim-item-groups-points group5"><div class="circle gradient-borange stack-E"></div></td>
+                <td class="anim-item-groups-points group5 name-width stack-E"><div class="ellipse football-hak-htl-right">E4</div></td>
+                <td class="anim-item-groups-points group5 points-width stack-E"><div class="ellipse">0</div><td></td>
+                <td class="narrow-col anim-item-groups-points group5"><div class="circle gradient-borange stack-F"></div></td>
+                <td class="anim-item-groups-points group5 name-width stack-F"><div class="ellipse football-hak-htl-right">F4</div></td>
+                <td class="anim-item-groups-points group5 points-width stack-F"><div class="ellipse">0</div>
+            </tr>
+            <tr><td class="narrow-col anim-item-groups-points group6"><div class="circle gradient-borange stack-D"></div></td>
+                <td class="anim-item-groups-points group6 name-width stack-D"><div class="ellipse football-hak-htl-right">D5</div></td>
+                <td class="anim-item-groups-points group6 points-width stack-D"><div class="ellipse">0</div><td></td>
+                <td class="narrow-col anim-item-groups-points group6"><div class="circle gradient-borange stack-E"></div></td>
+                <td class="anim-item-groups-points group6 name-width stack-E"><div class="ellipse football-hak-htl-right">E5</div></td>
+                <td class="anim-item-groups-points group6 points-width stack-E"><div class="ellipse">0</div><td></td>
+                <td class="narrow-col anim-item-groups-points group6"><div class="circle gradient-borange stack-F"></div></td>
+                <td class="anim-item-groups-points group6 name-width stack-F"><div class="ellipse football-hak-htl-right">F5</div></td>
+                <td class="anim-item-groups-points group6 points-width stack-F"><div class="ellipse">0</div>
+            </tr>
+            <tr><td class="narrow-col anim-item-groups-points group7"><div class="circle gradient-borange stack-D"></div></td>
+                <td class="anim-item-groups-points group7 name-width stack-D"><div class="ellipse football-hak-htl-right">D6</div></td>
+                <td class="anim-item-groups-points group7 points-width stack-D"><div class="ellipse">0</div><td></td>
+                <td class="narrow-col anim-item-groups-points group7"><div class="circle gradient-borange stack-E"></div></td>
+                <td class="anim-item-groups-points group7 name-width stack-E"><div class="ellipse football-hak-htl-right">E6</div></td>
+                <td class="anim-item-groups-points group7 points-width stack-E"><div class="ellipse">0</div><td></td>
+                <td class="narrow-col anim-item-groups-points group7"><div class="circle gradient-borange stack-F"></div></td>
+                <td class="anim-item-groups-points group7 name-width stack-F"><div class="ellipse football-hak-htl-right">F6</div></td>
+                <td class="anim-item-groups-points group7 points-width stack-F"><div class="ellipse">0</div>
+            </tr>
+        </table>
+    </div>
+
+    <!--Turnierbaum D=FALSE-->
+    <div class="grid-container anim-wrapper-turnierbaum">
+            <table class="fullscreen-grid">
+            <tr>
+                <td class="narrow-col anim-item-turnierbaum group0"><div class="circle gradient-borange" id="v1AO"></div></td>
+                <td colspan="2" class="anim-item-turnierbaum group0" id="v1AT"><div class="ellipse football-hak-htl-right">???</div></td>
+                <td></td><td class="narrow-col"></td><td></td><td></td><td></td><td class="narrow-col"></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td class="narrow-col anim-item-turnierbaum group1"><div class="circle gradient-borange" id="v1BO"></div></td>
+                <td colspan="2" class="anim-item-turnierbaum group1" id="v1BT"><div class="ellipse football-hak-htl-right">???</div></td>
+                <td></td><td class="narrow-col"></td><td></td><td></td><td></td><td class="narrow-col"></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td class="narrow-col"></td><td class="border-right"></td><td></td><td></td>
+                <td class="narrow-col anim-item-turnierbaum group3"><div class="circle gradient-borange" id="h1AO"></div></td>
+                <td colspan="2" class="anim-item-turnierbaum group3" id="h1AT"><div class="ellipse football-hak-htl-right">???</div></td>
+                <td></td><td class="narrow-col"></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td class="narrow-col"></td><td class="border-right"></td><td class="border-top"></td><td class="border-top"></td>
+                <td class="narrow-col anim-item-turnierbaum group4"><div class="circle gradient-borange" id="h1BO"></div></td>
+                <td colspan="2" class="anim-item-turnierbaum group4" id="h1BT"><div class="ellipse football-hak-htl-right">???</div></td>
+                <td></td><td class="narrow-col"></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td class="narrow-col anim-item-turnierbaum group0"><div class="circle gradient-borange" id="v2AO"></div></td>
+                <td colspan="2" class="anim-item-turnierbaum group0" id="v2AT"><div class="ellipse football-hak-htl-right">???</div></td>
+                <td></td><td class="narrow-col"></td><td class="border-right"></td><td></td><td></td><td class="narrow-col"></td>
+                <td colspan="2"><div class="ellipse football-hak-htl-right anim-item-turnierbaum group6 bold small-head-font">Spiel um Platz 3</div>
+            </tr>
+            <tr>
+                <td class="narrow-col anim-item-turnierbaum group1"><div class="circle gradient-borange" id="v2BO"></div></td>
+                <td colspan="2" class="anim-item-turnierbaum group1" id="v2BT"><div class="ellipse football-hak-htl-right">???</div></td>
+                <td></td><td class="narrow-col"></td><td class="border-right"></td><td></td><td></td>
+                <td class="narrow-col anim-item-turnierbaum group7"><div class="circle gradient-silver"></div></td>
+                <td colspan="2" class="anim-item-turnierbaum group7" id="s2AT"><div class="ellipse football-hak-htl-right">???</div></td>
+            </tr>
+            <tr>
+                <td class="narrow-col"></td><td></td><td></td><td></td><td class="narrow-col"></td><td class="border-right"></td><td></td><td></td>
+                <td class="narrow-col anim-item-turnierbaum group8"><div class="circle gradient-silver"></div></td>
+                <td colspan="2" class="anim-item-turnierbaum group8" id="s2BT"><div class="ellipse football-hak-htl-right">???</div></td>
+            </tr>
+            <tr>
+                <td class="narrow-col"></td><td></td><td></td><td></td><td class="narrow-col"></td><td class="border-right"></td><td></td><td></td><td class="narrow-col"></td><td class="border-right"></td><td></td>
+            </tr>
+            <tr>
+                <td class="narrow-col"></td><td></td><td></td><td></td><td class="narrow-col"></td><td class="border-right"></td><td class="border-top"></td><td class="border-top"></td><td class="narrow-col border-top"></td><td class="border-top border-right"></td><td></td>
+            </tr>
+            <tr>
+                <td class="narrow-col"></td><td></td><td></td><td></td><td class="narrow-col"></td><td class="border-right"></td><td></td><td></td>
+                <td class="narrow-col anim-item-turnierbaum group6"><div class="circle gradient-gold"></div></td>
+                <td colspan="2" class="anim-item-turnierbaum group6" id="f1AT"><div class="ellipse football-hak-htl-right">???</div></td>
+            </tr>
+            <tr>
+                <td class="narrow-col anim-item-turnierbaum group0"><div class="circle gradient-borange" id="v3AO"></div></td>
+                <td colspan="2" class="anim-item-turnierbaum group0" id="v3AT"><div class="ellipse football-hak-htl-right">???</div></td>
+                <td></td><td class="narrow-col"></td><td class="border-right"></td><td></td><td></td>
+                <td class="narrow-col anim-item-turnierbaum group7"><div class="circle gradient-gold"></div></td>
+                <td colspan="2" class="anim-item-turnierbaum group7" id="f1BT"><div class="ellipse football-hak-htl-right">???</div></td>
+            </tr>
+            <tr>
+                <td class="narrow-col anim-item-turnierbaum group1"><div class="circle gradient-borange" id="v3BO"></div></td>
+                <td colspan="2" class="anim-item-turnierbaum group1" id="v3BT"><div class="ellipse football-hak-htl-right">???</div></td>
+                <td></td><td class="narrow-col"></td><td class="border-right"></td><td></td><td></td><td class="narrow-col"></td>
+                <td colspan="2" class="anim-item-turnierbaum group8"><div class="ellipse football-hak-htl-right bold small-head-font">Großes Finale</div>
+            </tr>
+            <tr>
+                <td class="narrow-col"></td><td class="border-right"></td><td></td><td></td>
+                <td class="narrow-col anim-item-turnierbaum group3"><div class="circle gradient-borange" id="h2AO"></div></td>
+                <td colspan="2" class="anim-item-turnierbaum group3"  id="h2AT"><div class="ellipse football-hak-htl-right">???</div></td>
+                <td></td><td class="narrow-col"></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td class="narrow-col"></td><td class="border-right"></td><td class="border-top"></td><td class="border-top"></td>
+                <td class="narrow-col anim-item-turnierbaum group4"><div class="circle gradient-borange" id="h2BO"></div></td>
+                <td colspan="2" class="anim-item-turnierbaum group4" id="h2BT"><div class="ellipse football-hak-htl-right">???</div></td>
+                <td></td><td class="narrow-col"></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td class="narrow-col anim-item-turnierbaum group0"><div class="circle gradient-borange" id="v4AO"></div></td>
+                <td colspan="2" class="anim-item-turnierbaum group0" id="v4AT"><div class="ellipse football-hak-htl-right">???</div></td>
+                <td></td><td class="narrow-col"></td><td></td><td></td><td></td><td class="narrow-col"></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td class="narrow-col anim-item-turnierbaum group1"><div class="circle gradient-borange" id="v4BO"></div></td>
+                <td colspan="2" class="anim-item-turnierbaum group1" id="v4BT"><div class="ellipse football-hak-htl-right">???</div></td>
+                <td></td><td class="narrow-col"></td><td></td><td></td><td></td><td class="narrow-col"></td><td></td><td></td>
+            </tr>
+        </table>
+    </div>
+
+    <!--Torschützenliste D=TRUE-->
+    <div class="grid-container">
+        <table class="fullscreen-grid anim-wrapper-tor">
+            <tr>
+                <td></td><td class="narrow-col"></td>
+                <td colspan="2" class="anim-item-tor group0"><div class="ellipse football-hak-htl-right bold small-head-font">Spieler:in</div></td>
+                <td colspan="2" class="anim-item-tor group0"><div class="ellipse football-hak-htl-right bold small-head-font">Mannschaft</div></td>
+                <td class="torpoints-width anim-item-tor group0"><div class="ellipse bold small-head-font">Tore</div></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td class="narrow-col anim-item-tor group1"><div class="circle gradient-borange">1</div></td>
+                <td colspan="2" class="anim-item-tor group1"><div class="ellipse football-hak-htl-right">1</div></td>
+                <td colspan="2" class="anim-item-tor group1"><div class="ellipse football-hak-htl-right">1</div></td>
+                <td class="torpoints-width anim-item-tor group1"><div class="ellipse">0</div></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td class="narrow-col anim-item-tor group2"><div class="circle gradient-borange">2</div></td>
+                <td colspan="2" class="anim-item-tor group2"><div class="ellipse football-hak-htl-right">2</div></td>
+                <td colspan="2" class="anim-item-tor group2"><div class="ellipse football-hak-htl-right">2</div></td>
+                <td class="torpoints-width anim-item-tor group2"><div class="ellipse">0</div></td><td></td><td></td><td></td><td></td>
+            </tr>
+
+            <tr>
+                <td></td><td class="narrow-col anim-item-tor group3"><div class="circle gradient-borange">3</div></td>
+                <td colspan="2" class="anim-item-tor group3"><div class="ellipse football-hak-htl-right">3</div></td>
+                <td colspan="2" class="anim-item-tor group3"><div class="ellipse football-hak-htl-right">3</div></td>
+                <td class="torpoints-width anim-item-tor group3"><div class="ellipse">0</div></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td class="narrow-col anim-item-tor group4"><div class="circle gradient-borange">4</div></td>
+                <td colspan="2" class="anim-item-tor group4"><div class="ellipse football-hak-htl-right">4</div></td>
+                <td colspan="2" class="anim-item-tor group4"><div class="ellipse football-hak-htl-right">4</div></td>
+                <td class="torpoints-width anim-item-tor group4"><div class="ellipse">0</div></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td class="narrow-col anim-item-tor group5"><div class="circle gradient-borange">5</div></td>
+                <td colspan="2" class="anim-item-tor group5"><div class="ellipse football-hak-htl-right">5</div></td>
+                <td colspan="2" class="anim-item-tor group5"><div class="ellipse football-hak-htl-right">5</div></td>
+                <td class="torpoints-width anim-item-tor group5"><div class="ellipse">0</div></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td class="narrow-col anim-item-tor group6"><div class="circle gradient-borange">6</div></td>
+                <td colspan="2" class="anim-item-tor group6"><div class="ellipse football-hak-htl-right">6</div></td>
+                <td colspan="2" class="anim-item-tor group6"><div class="ellipse football-hak-htl-right">6</div></td>
+                <td class="torpoints-width anim-item-tor group6"><div class="ellipse">0</div></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td class="narrow-col anim-item-tor group7"><div class="circle gradient-borange">7</div></td>
+                <td colspan="2" class="anim-item-tor group7"><div class="ellipse football-hak-htl-right">7</div></td>
+                <td colspan="2" class="anim-item-tor group7"><div class="ellipse football-hak-htl-right">7</div></td>
+                <td class="torpoints-width anim-item-tor group7"><div class="ellipse">0</div></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td class="narrow-col anim-item-tor group8"><div class="circle gradient-borange">8</div></td>
+                <td colspan="2" class="anim-item-tor group8"><div class="ellipse football-hak-htl-right">8</div></td>
+                <td colspan="2" class="anim-item-tor group8"><div class="ellipse football-hak-htl-right">8</div></td>
+                <td class="torpoints-width anim-item-tor group8"><div class="ellipse">0</div></td><td></td>
+                <td colspan="3" rowspan="2"><div class="ellipse fill-out football-hak-htl-right text-align-left head-font bold">Torschützenranking</div></td>
+            </tr>
+            <tr>
+                <td></td><td class="narrow-col anim-item-tor group9"><div class="circle gradient-borange">9</div></td>
+                <td colspan="2" class="anim-item-tor group9"><div class="ellipse football-hak-htl-right">9</div></td>
+                <td colspan="2" class="anim-item-tor group9"><div class="ellipse football-hak-htl-right">9</div></td>
+                <td class="torpoints-width anim-item-tor group9"><div class="ellipse">0</div></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td class="narrow-col anim-item-tor group10"><div class="circle gradient-borange">10</div></td>
+                <td colspan="2" class="anim-item-tor group10"><div class="ellipse football-hak-htl-right">10</div></td>
+                <td colspan="2" class="anim-item-tor group10"><div class="ellipse football-hak-htl-right">10</div></td>
+                <td class="torpoints-width anim-item-tor group10"><div class="ellipse">0</div></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td class="narrow-col anim-item-tor group11"><div class="circle gradient-borange">11</div></td>
+                <td colspan="2" class="anim-item-tor group11"><div class="ellipse football-hak-htl-right">11</div></td>
+                <td colspan="2" class="anim-item-tor group11"><div class="ellipse football-hak-htl-right">11</div></td>
+                <td class="torpoints-width anim-item-tor group11"><div class="ellipse">0</div></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td class="narrow-col anim-item-tor group12"><div class="circle gradient-borange">12</div></td>
+                <td colspan="2" class="anim-item-tor group12"><div class="ellipse football-hak-htl-right">12</div></td>
+                <td colspan="2" class="anim-item-tor group12"><div class="ellipse football-hak-htl-right">12</div></td>
+                <td class="torpoints-width anim-item-tor group12"><div class="ellipse">0</div></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td class="narrow-col anim-item-tor group13"><div class="circle gradient-borange">13</div></td>
+                <td colspan="2" class="anim-item-tor group13"><div class="ellipse football-hak-htl-right">13</div></td>
+                <td colspan="2" class="anim-item-tor group13"><div class="ellipse football-hak-htl-right">13</div></td>
+                <td class="torpoints-width anim-item-tor group13"><div class="ellipse">0</div></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td class="narrow-col anim-item-tor group14"><div class="circle gradient-borange">14</div></td>
+                <td colspan="2" class="anim-item-tor group14"><div class="ellipse football-hak-htl-right">14</div></td>
+                <td colspan="2" class="anim-item-tor group14"><div class="ellipse football-hak-htl-right">14</div></td>
+                <td class="torpoints-width anim-item-tor group14"><div class="ellipse">0</div></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td class="narrow-col anim-item-tor group15"><div class="circle gradient-borange">15</div></td>
+                <td colspan="2" class="anim-item-tor group15"><div class="ellipse football-hak-htl-right">15</div></td>
+                <td colspan="2" class="anim-item-tor group15"><div class="ellipse football-hak-htl-right">15</div></td>
+                <td class="torpoints-width anim-item-tor group15"><div class="ellipse">0</div></td><td></td><td></td><td></td><td></td>
+            </tr>
+
+            <tr>
+                <td></td><td class="narrow-col"></td><td></td><td></td><td></td><td></td><td class="torpoints-width"></td><td></td><td></td><td></td><td></td>
+            </tr>
+        </table>
+    </div>
+
+    <!--TOP 3 D=FALSE-->
+    <div class="grid-container">
+        <table class="fullscreen-grid anim-wrapper-top3">
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td colspan="6" rowspan="2" class="anim-item-top3 group0"><div class="ellipse fill-out mega-head-font bold football-hak-htl-right">TOP 3</div></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td colspan="2" rowspan="5"  class="anim-item-top3 group1"><div class="circle-top3 gradient-gold">1</div></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td colspan="2" rowspan="5"  class="anim-item-top3 group1"><div class="circle-top3 gradient-silver">2</div></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td colspan="2" rowspan="5"  class="anim-item-top3 group1"><div class="circle-top3 gradient-bronze">3</div></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td colspan="2" rowspan="4" class="bg-grey-1 anim-item-top3 group2"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td colspan="2" rowspan="2" class="bg-grey-2 anim-item-top3 group2"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2" rowspan="2" class="bg-grey-2 anim-item-top3 group2"><div class="ellipse football-hak-htl-right fill-out text-align-left small-head-font" id="top1-out"></div></td>
+                <td colspan="2" rowspan="2" class="bg-grey-1 anim-item-top3 group2"><div class="ellipse football-hak-htl-right fill-out text-align-left small-head-font" id="top2-out"></div></td>
+                <td colspan="2" rowspan="2" class="bg-grey-3 anim-item-top3 group2"><div class="ellipse football-hak-htl-right fill-out text-align-left small-head-font" id="top3-out"></div></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+        </table>
+    </div>
+
+    <!--Credits D=TRUE-->
+    <div class="grid-container">
+        <table class="fullscreen-grid anim-wrapper-credits">
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                <td class="narrow-col"></td>
+                <td colspan="3" rowspan="2" class="anim-item-credits group0"><div class="ellipse bold fill-out head-font">SZ-Ybbs Fußballturnier 2025<br></div></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                <td class="narrow-col"></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                <td class="narrow-col anim-item-credits group1"><div class="circle gradient-borange"></div></td>
+                <td colspan="3" class="anim-item-credits group1"><div class="ellipse football-hak-htl-right">Person 1</div></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                <td class="narrow-col anim-item-credits group2"><div class="circle gradient-borange"></div></td>
+                <td colspan="3" class="anim-item-credits group2"><div class="ellipse football-hak-htl-right">Person 2</div></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                <td class="narrow-col anim-item-credits group3"><div class="circle gradient-borange"></div></td>
+                <td colspan="3" class="anim-item-credits group3"><div class="ellipse football-hak-htl-right">Person 3</div></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                <td class="narrow-col anim-item-credits group4"><div class="circle gradient-borange"></div></td>
+                <td colspan="3" class="anim-item-credits group4"><div class="ellipse football-hak-htl-right">Person 4</div></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                <td class="narrow-col anim-item-credits group5"><div class="circle gradient-borange"></div></td>
+                <td colspan="3" class="anim-item-credits group5"><div class="ellipse football-hak-htl-right">Person 5</div></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                <td class="narrow-col anim-item-credits group6"><div class="circle gradient-borange"></div></td>
+                <td colspan="3" class="anim-item-credits group6"><div class="ellipse football-hak-htl-right">Person 6</div></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                <td class="narrow-col anim-item-credits group7"><div class="circle gradient-borange"></div></td>
+                <td colspan="3" class="anim-item-credits group7"><div class="ellipse football-hak-htl-right">Person 7</div></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                <td class="narrow-col anim-item-credits group8"><div class="circle gradient-borange"></div></td>
+                <td colspan="3" class="anim-item-credits group8"><div class="ellipse football-hak-htl-right">Person 8</div></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                <td class="narrow-col anim-item-credits group9"><div class="circle gradient-borange"></div></td>
+                <td colspan="3" class="anim-item-credits group9"><div class="ellipse football-hak-htl-right">Person 9</div></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                <td class="narrow-col anim-item-credits group10"><div class="circle gradient-borange"></div></td>
+                <td colspan="3" class="anim-item-credits group10"><div class="ellipse football-hak-htl-right">Person 10</div></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                <td class="narrow-col anim-item-credits group11"><div class="circle gradient-borange"></div></td>
+                <td colspan="3" class="anim-item-credits group11"><div class="ellipse football-hak-htl-right">Person 11</div></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                <td class="narrow-col anim-item-credits group12"><div class="circle gradient-borange"></div></td>
+                <td colspan="3" class="anim-item-credits group12"><div class="ellipse football-hak-htl-right">Person 12</div></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                <td class="narrow-col anim-item-credits group13"><div class="circle gradient-borange"></div></td>
+                <td colspan="3" class="anim-item-credits group13"><div class="ellipse football-hak-htl-right">Person 13</div></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                <td class="narrow-col anim-item-credits group14"><div class="circle gradient-borange"></div></td>
+                <td colspan="3" class="anim-item-credits group14"><div class="ellipse football-hak-htl-right">Person 14</div></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="narrow-col"></td><td></td><td></td><td></td>
+            </tr>
+        </table>
+    </div>
+
+    <!--Nächsten drei Matches D=TRUE-->
+    <div class="grid-container">
+        <table class="fullscreen-grid anim-wrapper-coming">
+            <tr><td class="narrow-col"></td><td></td><td></td>
+                <td class="narrow-col"></td><td></td><td></td>
+                <td class="narrow-col"></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <!--BRIDING GROUP START-->
+            <tr><td class="narrow-col"></td></tr><tr><td class="narrow-col"></td></tr><tr><td class="narrow-col"></td></tr>
+            <tr><td class="narrow-col"></td></tr><tr><td class="narrow-col"></td></tr><tr><td class="narrow-col"></td></tr>
+            <tr><td class="narrow-col"></td></tr><tr><td class="narrow-col"></td></tr><tr><td class="narrow-col"></td></tr>
+            <tr><td class="narrow-col"></td></tr>
+            <!--BRIDING GROUP END-->
+            <tr>
+                <td class="narrow-col"></td><td></td>
+                <td colspan="3" class="anim-item-coming group0"><div class="ellipse bold head-font">Coming up...</div></td>
+                <td></td>
+                <td class="narrow-col"></td>
+            </tr>
+            <tr>
+                <td class="narrow-col anim-item-coming group1"><div class="circle gradient-borange" id="comingUp1Aorg"></div></td>
+                <td colspan="2" class="anim-item-coming group1"><div class="ellipse football-hak-htl-right text-align-left" id="comingUp1Ateam">Mannschaft 1A</div></td>
+                <td class="narrow-col anim-item-coming group1"><div class="ellipse" id="vs1">VS</div></td>
+                <td colspan="2" class="anim-item-coming group1"><div class="ellipse football-hak-htl-left text-align-right" id="comingUp1Bteam">Mannschaft 1B</div></td>
+                <td class="narrow-col anim-item-coming group1"><div class="circle gradient-borange" id="comingUp1Borg"></div></td>
+            </tr>
+            <tr>
+                <td class="narrow-col anim-item-coming group2"><div class="circle gradient-borange" id="comingUp2Aorg"></div></td>
+                <td colspan="2" class="anim-item-coming group2"><div class="ellipse football-hak-htl-right text-align-left" id="comingUp2Ateam">Mannschaft 2A</div></td>
+                <td class="narrow-col anim-item-coming group2"><div class="ellipse" id="vs2">VS</div></td>
+                <td colspan="2" class="anim-item-coming group2"><div class="ellipse football-hak-htl-left text-align-right" id="comingUp2Bteam">Mannschaft 2B</div></td>
+                <td class="narrow-col anim-item-coming group2"><div class="circle gradient-borange" id="comingUp2Borg"></div></td>
+            </tr>
+            <tr>
+                <td class="narrow-col anim-item-coming group2"><div class="circle gradient-borange" id="comingUp3Aorg"></div></td>
+                <td colspan="2" class="anim-item-coming group3"><div class="ellipse football-hak-htl-right text-align-left" id="comingUp3Ateam">Mannschaft 3A</div></td>
+                <td class="narrow-col anim-item-coming group3"><div class="ellipse" id="vs3">VS</div></td>
+                <td colspan="2" class="anim-item-coming group3"><div class="ellipse football-hak-htl-left text-align-right" id="comingUp3Bteam">Mannschaft 3B</div></td>
+                <td class="narrow-col anim-item-coming group3"><div class="circle gradient-borange" id="comingUp3Borg"></div></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Elfmeter Scoreboard unten mittig D=TRUE-->
+    <div class="anim-wrapper-elfmeter" id="animElfmeter">
+        <div class="elfmeter-wrapper">
+            <div class="team-score-elfmeter">
+                <div class="team-circles-elfmeter">
+                    <!-- Team A circles -->
+                    <div class="circle circle-elfmeter gradient-borange" id="circleAB">+0</div>
+                    <div class="circle circle-elfmeter num5" id="circleA5">5</div>
+                    <div class="circle circle-elfmeter num4" id="circleA4">4</div>
+                    <div class="circle circle-elfmeter num3" id="circleA3">3</div>
+                    <div class="circle circle-elfmeter num2" id="circleA2">2</div>
+                    <div class="circle circle-elfmeter num1" id="circleA1">1</div>
+                    <span style="width:50px;"></span> <!-- spacing between A and B -->
+                    <!-- Team B circles -->
+                    <div class="circle circle-elfmeter num1" id="circleB1">1</div>
+                    <div class="circle circle-elfmeter num2" id="circleB2">2</div>
+                    <div class="circle circle-elfmeter num3" id="circleB3">3</div>
+                    <div class="circle circle-elfmeter num4" id="circleB4">4</div>
+                    <div class="circle circle-elfmeter num5" id="circleB5">5</div>
+                    <div class="circle circle-elfmeter gradient-borange" id="circleBB">+0</div>
+                </div>
+                <div class="team-names-elfmeter">
+                    <div class="ellipse ellipse-left football-hak-htl-right text-align-left circle-elfmeter num5 team-names-elfmeter left" id="elfmeterA">Team A</div>
+                    <div class="ellipse ellipse-right football-hak-htl-left text-align-right circle-elfmeter num5 right team-names-elfmeter right" id="elfmeterB">Team B</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Infografik unten mittig D=TRUE-->
+    <div class="anim-wrapper-infographic" id="animInfographic">
+        <div class="infographic-wrapper">
+            <div class="infographic-circle gradient-white anim-item-infographic" id="infoCircle">i</div>
+            <div class="infographic-ellipse anim-item-infographic" id="infoEllipse">Broadcast by SZ-Funkt</div>
+        </div>
+    </div>
+
+    <!--Endstand D=TRUE-->
+    <div class="anim-wrapper-endstand" id="animEndstand">
+        <div class="endstand-wrapper">
+            <div class="team-score-endstand">
+                <div class="circle gradient-borange anim-item-endstand circle-endstand" id="scoreAEndstand">0</div>
+                <div class="ellipse football-hak-htl-right text-align-left anim-item-endstand ellipse-endstand" id="teamAEndstand">Team A</div>
+                <div class="ellipse football-hak-htl-left text-align-right anim-item-endstand ellipse-endstand" id="teamBEndstand">Team B</div>
+                <div class="circle gradient-borange anim-item-endstand circle-endstand" id="scoreBEndstand">0</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="editor_view">
+        <div class="vorschau">
+            <table class="vorschau_table white-border">
+                <tr>
+                    <td id="out-scorebug-points-A"></td><td colspan="5" id="out-scorebug-name-A"></td>
+                </tr>
+                <tr>
+                    <td id="out-scorebug-points-B"></td><td colspan="5" id="out-scorebug-name-B"></td>
+                </tr>
+                <tr>
+                    <td class="gradient-white">i</td><td colspan="5"><span id="out-infotext"></span></td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="out-timer"></td><td colspan="4" id="out-group"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">TOP 3</td><td colspan="3" class="out-team-name"></td><td class="out-team-points"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><label><input type="text" placeholder="Rang1" id="top2-in"></label></td><td colspan="3" class="out-team-name"></td><td class="out-team-points"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><label><input type="text" placeholder="Rang2" id="top1-in"></label></td><td colspan="3" class="out-team-name"></td><td class="out-team-points"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><label><input type="text" placeholder="Rang3" id="top3-in"></label></td><td colspan="3" class="out-team-name"></td><td class="out-team-points"></td>
+                </tr>
+                <tr>
+                    <td id="out-mode" colspan="2">Modus</td><td colspan="3" class="out-team-name"></td><td class="out-team-points"></td>
+                </tr>
+                <tr>
+                    <td id="out-turnierbaum" class="gradient-red" colspan="2">Exec. Tunierbaum</td><td colspan="3" class="out-team-name"></td><td class="out-team-points"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="button3">
+    <table class="buttons">
+        <tr>
+            <td><button class="button2 button-color-green" id="startBtn">Start</button></td>
+            <td><button class="button2 button-color-blue" id="scorebug-toggle">Scorebug ein/aus</button></td>
+            <td><button class="button2 button-color-blue" id="toggle-grouptable">Grup-Übersicht ein/aus</button></td>
+            <td><button class="button2 button-color-blue" id="infoToogle">Info ein/aus</button></td>
+            <td><button class="button2 button-color-blue" id="toggle-coming">Toggle Coming</button></td>
+        </tr>
+        <tr>
+            <td><button class="button2 button-color-green" id="stopBtn">Stopp</button></td>
+            <td><button class="button2 button-color-blue" id="endstandToggle">Endstand ein/aus</button></td>
+            <td><button class="button2 button-color-blue" id="toggle-grouptable-points">Grpoints ein/aus</button></td>
+            <td><button class="button2 button-color-blue" id="toggle-top3">Toogle TOP3</button></td>
+            <td><button class="button2 button-color-purple" id="next-game">Next-Game</button></td>
+        </tr>
+        <tr>
+            <td><button class="button2 danger button-color-green" id="resetBtn">Reset</button></td>
+            <td></td>
+            <td><button class="button2 button-color-blue" id="toggle-turnierbaum">Tunierbaum ein/aus</button></td>
+            <td><button class="button2 button-color-orange" id="changeMode">Switch Layout</button></td>
+            <td><button class="button2 button-color-purple" id="prev-game">Prev-Game</button></td>
+        </tr>
+        <tr>
+            <td><button class="button2 button-color-black" id="out-prev"><<</button></td>
+            <td><button class="button2 button-color-black" id="out-next">>></button></td>
+            <td><button class="button2 button-color-black" id="toggle-hold">Execute Tunierbaum</button></td>
+            <td><button class="button2 button-color-blue" id="toggle-tor">Torliste</button></td>
+            <td><button class="button2 button-color-blue" id="toggle-credits">Credits</button></td>
+        </tr>
+        <tr>
+            <td><button class="button2 button-color-blue" id="penalty-toggle">Elfmeter</button></td>
+            <td><button class="button2 button-color-blue" id="EBonusStart">EBonus ausfahren</button></td>
+            <td><button class="button2 button-color-red" id="EBonusA">EBonus +A</button></td>
+            <td><button class="button2 button-color-red" id="EBonusB">EBonus +B</button></td>
+            <td><button class="button2 button-color-red" id="EBonusR">EBonus RESET</button></td>
+        </tr>
+        <tr>
+            <td><button class="button2 button-color-red" id="Ea1">A1</button></td>
+            <td><button class="button2 button-color-red" id="Ea2">A2</button></td>
+            <td><button class="button2 button-color-red" id="Ea3">A3</button></td>
+            <td><button class="button2 button-color-red" id="Ea4">A4</button></td>
+            <td><button class="button2 button-color-red" id="Ea5">A5</button></td>
+        </tr>
+        <tr>
+            <td><button class="button2 button-color-red" id="Eb1">B1</button></td>
+            <td><button class="button2 button-color-red" id="Eb2">B2</button></td>
+            <td><button class="button2 button-color-red" id="Eb3">B3</button></td>
+            <td><button class="button2 button-color-red" id="Eb4">B4</button></td>
+            <td><button class="button2 button-color-red" id="Eb5">B5</button></td>
+        </tr>
+    </table>
+        </div>
+</div>
+
+<script src="js/csvJSQL.js"></script>
+<script src="js/dataloader.js"></script>
+<script src="js/timer.js"></script>
+<script src="js/scorebug.js"></script>
+<script src="js/elfmeter.js"></script>
+<script src="js/endstand.js"></script>
+<script src="js/turnierbaum.js"></script>
+<script src="js/grouptable.js"></script>
+<script src="js/infographic.js"></script>
+<script src="js/torschuetzenliste.js"></script>
+<script src="js/credits.js"></script>
+<script src="js/top3.js"></script>
+<script src="js/coming.js"></script>
+<script src="js/modes.js"></script>
+<script src="js/view.js"></script>
+
+</body>
+</html>

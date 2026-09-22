@@ -1,0 +1,53 @@
+.fullscreen-grid {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    width: 97.5%;
+    height: 100%;
+
+    display: grid;
+
+    table-layout: fixed;
+    border-collapse: collapse;
+    pointer-events: none;
+}
+
+.fullscreen-grid td {
+    width: calc((1920px - 3 * (1080px / 17)) / 8);
+    height: calc(1080px / 17);
+    /*border: 1px solid white;*/
+    margin: 0;
+    padding-left: 5px;
+}
+
+.grid-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1920px;
+    height: 1080px;
+}
+
+.fill-out
+{
+    height: 70%;
+}
+
+.narrow-col {
+    width: calc(1080px / 17) !important;
+    /*background-color: #0051bb;*/
+}
+
+.name-width{
+    width: calc(((1920px - 3 * (1080px / 17)) / 8)*1.9) !important;
+}
+
+.points-width{
+    width: calc(((1920px - 3 * (1080px / 17)) / 8)*0.1) !important;
+}
+
+.torpoints-width{
+    width: calc(((1920px - 3 * (1080px / 17)) / 8)*0.75) !important;
+}
