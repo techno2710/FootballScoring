@@ -2,6 +2,16 @@ This is a scoreboard system for football/soccer for livestrams via OBS.
 
 This system is no longer maintained (no major and minor updates).
 
+Written by Sebastian Zöchbauer, Pyhton-Skript bei Prof. Hofer (SZ-Funkt)
+
+Required Hard/Software:
+- Python
+- OBS Studio
+- Webbrowser
+- Touchscreen
+- Internet Connection
+- Loveable App provided by the event organizers
+
 USAGE:
 1) Download the repository
 2) Add an OBS-Browser-Source and set the resolution to 3840x1080p. Be sure that the streaming canvas is set to 1920x1080p. Select the file index.html as the source.
@@ -10,3 +20,5 @@ USAGE:
 5) Start the script /controls/PlayerScores/start-script.bat and replace all the needed paths to connect with Google Drive and the Loveable Backend provided by the event organizers.
 
 You are now able to control the scoreboard-overlay via the controls on the touchscreens.
+
+This tool was used during the 2025 Soccer-Tournament at SZ-Ybbs.
