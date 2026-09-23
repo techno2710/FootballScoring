@@ -2,8 +2,6 @@ This is a scoreboard system for football/soccer for livestrams via OBS.
 
 This system is no longer maintained (no major and minor updates).
 
-Written by Sebastian Zöchbauer, Pyhton-Skript bei Prof. Hofer (SZ-Funkt)
-
 Required Hard/Software:
 - Python
 - OBS Studio
